@@ -1,0 +1,160 @@
+da:
+  plugins:
+    refinerycms_blog:
+      title: Blog
+  admin:
+    blog:
+      categories:
+        category:
+          edit: Rediger denne kategori
+          delete: Slet denne kategori helt
+        index:
+          no_items_yet: 'Der er ingen kategorier endnu. Klik "%{create}" for at tilføje din første kategori.'
+      comments:
+        approved: 'Kommentaren fra "%{author}" er blevet godkendt.'
+        comment:
+          view_live_html: 'Vis denne kommentar live <br/><em>(åbner i et nyt vindue)</em>'
+          read: Læs denne kommentar
+          reject: Afvis denne kommentar
+          approve: Godkend denne kommentar
+        rejected: 'Kommentaren fra "%{author}" er blevet afvist.'
+        index:
+          no_items_yet: 'Der er ingen %{type} kommentarer.'
+        show:
+          comment: Kommentar
+          blog_post: Blog artikel
+          from: Udstedt af
+          date: Udstedt
+          message: Kommentar
+          details: Detaljer
+          age: Alder
+          actions: Kommandoer
+          back: Tilbage til alle kommentarer
+          reject: Afvis denne kommentar
+          approve: Godkend denne kommentar
+      posts:
+        form:
+          advanced_options: Advanceret opsætning
+          toggle_advanced_options: Klik for at tilgå meta tag settings og menu opsætning
+          save_as_draft: Gem som Udkast
+          published_at: Publicer Udkast
+          custom_url: Kustomiseret Url
+          custom_url_help: Generer linket for blog artiklen fra denne tekst istedet for titlen.
+          copy_body: Kopier Artikel tekst til Teaser
+          copy_body_help: Kopier arikel tekst til teaser. LAd teaser være blank og lad Refinery automatisk oprette teaser.
+        index:
+          no_items_yet: 'Der er endnu ingen Blog artikler. Klik "%{create}" fo at tilføje din førte blog artikel.'
+        uncategorized:
+          no_items_yet: 'Der er ingen ukategoriserede Blog Artikler.'
+        post:
+          view_live_html: 'Vis denne blog artikel live <br/><em>(åbner i et nyt vindue)</em>'
+          edit: Rediger denne blog artikel
+          delete: Slet denne blog artikel helt
+      settings:
+        notification_recipients:
+          value: Send notifikationer til
+          explanation: 'Hver gang nogen kommenterer på blog artiklen, vil Refinery udsende en email der siger der er en ny kommentar.'
+          hint: 'Når en ny kommentar tilføjes, vil Refinery sende en email notificaring til dig.'
+          example: "Enter your email address(es) like: jack@work.com, jill@office.com"
+          updated: 'Notificerede modtagere er blevet sat til "%{recipients}"'
+      submenu:
+        categories:
+          title: Kategorier
+          manage: Administrer
+          new: Opret ny kategori
+        comments:
+          title: Kommentarer
+          title_with_count: 'Kommentarer (%{new_count} nye)'
+          new: Ny
+          unmoderated: Ny
+          approved: Godkendt
+          rejected: Afvist
+        posts:
+          title: Blog artikler
+          manage: Administrer Blog artikler
+          new: Opret ny Blog artikler
+          uncategorized: Ukategoriserede Blog artikler
+        settings:
+          title: Settings
+          moderation: Moderering
+          update_notified: Updater hvem der notificeres
+          comments: Kommentarer
+          teasers: Teasers
+  blog:
+    comment_mailer:
+      notification:
+        greeting: Hej!
+        you_recieved_new_comment: Du har netop fået en ny kommentar
+        comment_starts: --- kommentar starter ---
+        comment_ends: --- kommentar ender ---
+        from: Fra
+        email: Email
+        message: Besked
+        closing_line: Hilsen
+        ps: 'P.S. Alle dine kommentare er gems i "Blog" sektionen i Refinery under "Kommentarer" under-menuen, såfremt du skulle ønske at se dem senere.'
+    shared:
+      categories:
+        title: Kategorier
+      rss_feed:
+        title: RSS Feed
+        subscribe: Abonnér
+      posts:
+        other: Andre Blog artikler
+        created_at: 'Udstedt %{when}'
+        read_more: Læs mere
+      comments:
+        singular: kommentar
+        none: ingen kommentarer
+      archives: Arkiver
+      tags:
+        title: "Tags"
+    categories:
+      show:
+        no_posts: Der er ingen blog artikler her endnu.
+    posts:
+      post:
+        filed_in: Gemt i
+      comment: kommentar
+      comments:
+        by: 'Udstedt af %{who}'
+        time_ago: '%{time} siden'
+        thank_you: 'Tak for din kommentar.'
+        thank_you_moderated: 'Tak for din kommentar. Din besked er blevet placeret i modereringskøen og vil blive vist så snart den er godkendt.'
+      index:
+        no_blog_articles_yet: Der er ikke blevet udstedt nogle blog artikler endnu. Kom tilbage senere.
+      show:
+        blog_home: Blog Hjem
+        comments:
+          title: Kommentarer
+          add: Lav en Kommentar
+        other: Andre Blog Artikler
+        filed_in: Gemt i
+        tagged: Tagged
+        submit: Send kommentar
+        name: Navn
+        email: Email
+        message: Besked
+        by: af
+      tagged:
+        no_blog_articles_yet: Der er ikke blevet udstedt nogle blog artikler endnu. Kom tilbage senere.
+        posts_tagged: Taggede Blog artikler
+      archive:
+        blog_archive_for: 'Blog Arkiv for %{date}'
+        no_blog_articles_posted: 'Der er ikke blevet udstedt nogle blog artikler for %{date}. Kom tilbage senere.'
+  activerecord:
+    models:
+      blog_category: Kategori
+      blog_comment: Kommentar
+      blog_post: Blog artikel
+    attributes:
+      blog_category:
+        title: Titel
+      blog_comment:
+        name: Navn
+        email: Email
+        message: Besked
+      blog_post:
+        title: Titel
+        body: Tekst
+        teaser: Teaser
+
